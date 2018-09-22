@@ -5,14 +5,14 @@ def scale_to_frequency(scale):
     pattern = r"[A-G]#?[0-9]"
     matchObj = re.match(pattern, scale)
     if not matchObj:
-        print("Illigal scale (1)")
+        print("Illegal scale (1)")
         exit()
 
     # B# and E# is not exist
     pattern = "[BE]#[0-9]"
     matchObj = re.match(pattern,    scale)
     if matchObj:
-        print("Illigal scale (2)")
+        print("Illegal scale (2)")
         exit()
     # A#0 -> 0
     if scale[0] == 'A' or scale[0] == 'B':
